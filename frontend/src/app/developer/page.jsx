@@ -66,6 +66,29 @@ export default function DeveloperPage() {
                             </div>
 
                             <div className="flex justify-center space-x-4">
+                                {/* GitHub */}
+                                <a
+                                    href="https://github.com/NirajDN"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition"
+                                >
+                                    <Github className="w-4 h-4 mr-2" />
+                                    GitHub
+                                </a>
+                                {/* Website (if available) */}
+                                {developer.blog && (
+                                    <a
+                                        href={developer.blog.startsWith('http') ? developer.blog : `https://${developer.blog}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-700 transition"
+                                    >
+                                        <Mail className="w-4 h-4 mr-2" />
+                                        Website
+                                    </a>
+                                )}
+                                {/* LinkedIn */}
                                 <a
                                     href="https://www.linkedin.com/in/nirajdn/"
                                     target="_blank"
@@ -75,6 +98,7 @@ export default function DeveloperPage() {
                                     <Linkedin className="w-4 h-4 mr-2" />
                                     LinkedIn
                                 </a>
+                                {/* LeetCode */}
                                 <a
                                     href="https://leetcode.com/u/NirajDn/"
                                     target="_blank"
@@ -84,6 +108,7 @@ export default function DeveloperPage() {
                                     <Code className="w-4 h-4 mr-2" />
                                     LeetCode
                                 </a>
+                                {/* Codolio */}
                                 <a
                                     href="https://codolio.com/profile/NirajDN10"
                                     target="_blank"
