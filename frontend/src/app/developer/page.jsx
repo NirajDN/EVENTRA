@@ -36,7 +36,7 @@ export default function DeveloperPage() {
                         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600"></div>
                     </div>
                 ) : developer ? (
-                    <div className="max-w-sm mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
+                    <div className="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
                         <div className="h-32 bg-gradient-to-r from-rose-500 to-pink-600"></div>
                         <div className="flex justify-center -mt-16">
                             <img
