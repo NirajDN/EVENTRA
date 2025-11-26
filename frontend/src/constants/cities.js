@@ -1,0 +1,23 @@
+export const CITIES = [
+    "Mumbai",
+    "Delhi",
+    "Bengaluru",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Pune",
+    "Ahmedabad",
+    "Jaipur",
+    "Surat",
+    "Lucknow",
+    "Kanpur",
+    "Nagpur",
+    "Indore",
+    "Thane",
+    "Bhopal",
+    "Visakhapatnam",
+    "Patna",
+    "Vadodara",
+    "Ghaziabad",
+    "Bangalore"
+];
