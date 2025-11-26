@@ -78,7 +78,7 @@ export default function HomePage() {
             name: 'Anjali S.',
             role: 'Bride',
             text: "I found my makeup artist and mehndi artist here. Highly recommended for stress-free planning!",
-            image: 'https://images.unsplash.com/photo-1623184663110-89ba5b565eb6?w=150&h=150&fit=crop&crop=faces'
+            image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=150&h=150&fit=crop&crop=faces'
         }
     ];
 
