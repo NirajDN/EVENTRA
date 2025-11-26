@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Code } from 'lucide-react';
 
 export default function DeveloperPage() {
     const [developer, setDeveloper] = useState(null);
@@ -67,25 +67,32 @@ export default function DeveloperPage() {
 
                             <div className="flex justify-center space-x-4">
                                 <a
-                                    href={developer.html_url}
+                                    href="https://www.linkedin.com/in/nirajdn/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition"
+                                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
                                 >
-                                    <Github className="w-4 h-4 mr-2" />
-                                    GitHub
+                                    <Linkedin className="w-4 h-4 mr-2" />
+                                    LinkedIn
                                 </a>
-                                {developer.blog && (
-                                    <a
-                                        href={developer.blog.startsWith('http') ? developer.blog : `https://${developer.blog}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-700 transition"
-                                    >
-                                        <Mail className="w-4 h-4 mr-2" />
-                                        Website
-                                    </a>
-                                )}
+                                <a
+                                    href="https://leetcode.com/u/NirajDn/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
+                                >
+                                    <Code className="w-4 h-4 mr-2" />
+                                    LeetCode
+                                </a>
+                                <a
+                                    href="https://codolio.com/profile/NirajDN10"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition"
+                                >
+                                    <Code className="w-4 h-4 mr-2" />
+                                    Codolio
+                                </a>
                             </div>
                         </div>
                     </div>
