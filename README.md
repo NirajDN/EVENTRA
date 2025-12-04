@@ -1,6 +1,9 @@
 # Eventra
 
 A comprehensive wedding vendor platform built with Next.js and Node.js.
+<img width="1440" height="808" alt="Screenshot 2025-12-04 at 3 45 24 PM" src="https://github.com/user-attachments/assets/005373a1-46c4-4b32-ab86-05be5ff389b3" />
+
+
 
 ## Features
 
