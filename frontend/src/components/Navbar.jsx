@@ -48,7 +48,7 @@ const Navbar = () => {
                             {/* Add more links as needed */}
                         </div>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden sm:flex items-center space-x-4">
                         <ThemeToggle />
                         {user ? (
                             <div className="flex items-center space-x-4">
@@ -89,6 +89,9 @@ const Navbar = () => {
                         )}
                     </div>
                     <div className="-mr-2 flex items-center sm:hidden">
+                        <div className="mr-4">
+                            <ThemeToggle />
+                        </div>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500 dark:hover:bg-gray-800"
@@ -146,19 +149,24 @@ const Navbar = () => {
                             </>
                         )}
                         {user && (
-                            <Link
-                                href={user.role === 'admin' ? '/admin' : user.role === 'vendor' ? '/dashboard/vendor' : '/dashboard/customer'}
-                                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
-                            >
-                                Dashboard
-                            </Link>
+                            <>
+                                <Link
+                                    href={user.role === 'admin' ? '/admin' : user.role === 'vendor' ? '/dashboard/vendor' : '/dashboard/customer'}
+                                    className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                                >
+                                    Dashboard
+                                </Link>
+                                <button
+                                    onClick={logout}
+                                    className="w-full text-left border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                                >
+                                    Logout
+                                </button>
+                            </>
                         )}
                     </div>
                 </div>
             )}
-            <div className="sm:hidden flex items-center justify-end px-4 pb-2">
-                <ThemeToggle />
-            </div>
         </nav>
     );
 };
