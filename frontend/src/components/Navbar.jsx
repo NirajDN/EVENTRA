@@ -156,6 +156,12 @@ const Navbar = () => {
                                 >
                                     Dashboard
                                 </Link>
+                                <Link
+                                    href="/dashboard/chat"
+                                    className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                                >
+                                    Messages
+                                </Link>
                                 <button
                                     onClick={logout}
                                     className="w-full text-left border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
