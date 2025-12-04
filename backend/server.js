@@ -57,17 +57,31 @@ io.on('connection', (socket) => {
 });
 
 // Connect to MongoDB
-if (!process.env.MONGO_URI) {
-  console.warn('Warning: MONGO_URI is not defined in .env');
-}
+// Connect to MongoDB
+const connectDB = async () => {
+  try {
+    const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/eventra';
+    console.log(`Attempting to connect to MongoDB at: ${mongoURI.includes('@') ? mongoURI.split('@')[1] : mongoURI}`); // Log URI without credentials
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/eventra')
-  .then(() => {
-    console.log('Connected to MongoDB');
+    await mongoose.connect(mongoURI, {
+      serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+    });
+
+    console.log('Connected to MongoDB successfully');
+
     server.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
-  })
-  .catch((err) => {
-    console.error('MongoDB connection error:', err);
-  });
+
+  } catch (err) {
+    console.error('MongoDB connection error:', err.message);
+    console.error('Full error details:', err);
+    // Do not exit process in dev, but might want to in prod if DB is critical
+    if (process.env.NODE_ENV === 'production') {
+      console.error('Critical: Database connection failed in production. Exiting.');
+      process.exit(1);
+    }
+  }
+};
+
+connectDB();

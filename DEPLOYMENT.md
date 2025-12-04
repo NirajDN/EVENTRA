@@ -221,9 +221,14 @@ If you want to add sample data:
 - Check browser console for errors
 
 ### Database Connection Issues
-- Verify MongoDB connection string is correct
-- Check if password contains special characters (URL encode them)
-- Ensure database user has proper permissions
+- **Verify MongoDB Connection String**: Ensure it follows the format `mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority`.
+- **Check IP Whitelist**: This is the #1 cause of errors. Go to MongoDB Atlas -> Network Access -> Add IP Address -> Allow Access from Anywhere (0.0.0.0/0).
+- **Check Password**: If your password has special characters (like @, :, #), you must URL encode them.
+- **Run Diagnostic Script**:
+    1. In Render Dashboard, go to your backend service.
+    2. Click on the "Shell" tab.
+    3. Run: `node check-db.js`
+    4. This script will test the connection and give you specific hints.
 
 ---
 
