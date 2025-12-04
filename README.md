@@ -2,6 +2,7 @@
 
 A comprehensive wedding vendor platform built with Next.js and Node.js.
 <img width="1440" height="808" alt="Screenshot 2025-12-04 at 3 45 24 PM" src="https://github.com/user-attachments/assets/005373a1-46c4-4b32-ab86-05be5ff389b3" />
+<img width="1440" height="803" alt="Screenshot 2025-12-04 at 3 46 23 PM" src="https://github.com/user-attachments/assets/9f5171f6-bfa0-4d76-97c1-8265ab771d5c" />
 
 
 
